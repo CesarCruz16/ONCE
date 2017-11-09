@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="header" Codebehind="header.master.cs" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="x-ua-compatible" content="IE=9" />
+    <title>- CoOrigina</title>
+    <link href="includes/estilos.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="cabezera">
+            <table cellpadding="0" border="0" cellspacing="0" width="100%" class="colorFondoTitulo" >
+                <tr>
+                    <td width="10">
+                        <asp:Image ID="imgLogo" runat="server" /></td>
+                    <td align="center">
+                        <table cellpadding="0" cellspacing="0" border="0" width="90%">
+                            <tr>
+                                <td align="center">
+                                    <asp:Label runat="server" ID="lblNombreCliente" Text="Nombre Empresa" CssClass="nombreCliente"></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <asp:Label runat="server" ID="lblNombreUsuario" Text="Nombre de Usuario" CssClass="colotTextoTitulo"></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    <asp:Label runat="server" ID="lblSeccion" Text="Oferta de Vivienda/Grupo URBI" CssClass="colotTextoTitulo"></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    <asp:Label runat="server" ID="lblUrl" Text="Página" CssClass="colotTextoTitulo"></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    <asp:Label runat="server" ID="lblFechaHora" Text="Fecha y Hora" CssClass="colotTextoTitulo"></asp:Label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="left">
+                        <!--
+                        MENU
+                        BackColor="#B1C3D9" COLOR DE FONDO DE MENU PRINCIPAL
+                        ForeColor="#336699" COLOR DE TEXTO DE MENU PRINCIPAL. ESTA PROPIEDAD SE DEBE ESTABLECER SOBRE ESTA PAGINA, NO PERMITE EL CSS
+                        BorderColor="#336699"   COLOR DE BORDE DE MENU PRINCIPAL
+
+                        SUBMENU
+                        ForeColor="Red" COLOR DE TEXTO EN ITEM
+                        backcolor="#B1C3D9" COLOR DE FONDO DE ITEM
+                        BorderColor="336699"
+
+                        <Orientation="Horizontal" BackColor="#B37D00" BorderColor="#FFFFFF" BorderStyle="Solid" 
+                        BorderWidth="1px" DynamicHorizontalOffset="3" ForeColor="#FFFFFF" Height="20px" StaticSubMenuIndent="">
+                        -->
+                        <asp:Menu runat="server" ID="mnPrincipal" Orientation="Horizontal" DynamicHorizontalOffset="3" Height="20px" StaticSubMenuIndent="" CssClass="menuPrincipal" ForeColor="White">
+                            <DynamicMenuItemStyle horizontalpadding="5px" verticalpadding="2" ForeColor="white" Font-Bold="false" backcolor="#0174B7" 
+                            BorderWidth="1px" BorderColor="#FFFFFF"  Width="350"/>
+                            <DynamicHoverStyle backcolor="#254DA5" Font-Bold="true"/>
+                        </asp:Menu>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="contenido">
+            <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+            </asp:contentplaceholder>
+        </div>
+    </form>
+</body>
+</html>
